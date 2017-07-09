@@ -32,7 +32,7 @@ namespace RFIDIntegratedApplication
         TagTableForm _tagTableForm;
         RSSIGraphFrom _rssiGraphForm;
         PhaseGraphForm _phaseGraphForm;
-        UpdateEpcForm  _updateEpcForm;
+        UpdateEpcForm _updateEpcForm;
         SearchRegionForm _searchRegionForm;
         SimulationForm _simulationForm;
 
@@ -84,7 +84,7 @@ namespace RFIDIntegratedApplication
                         return _readerSettingsForm;
                     }
 
-                    if(persistString == typeof(UpdateEpcForm).ToString())
+                    if (persistString == typeof(UpdateEpcForm).ToString())
                     {
                         return _updateEpcForm;
                     }
@@ -574,6 +574,7 @@ namespace RFIDIntegratedApplication
         private void tsbtnStart_Click(object sender, EventArgs e)
         {
             start();
+            this.tssbtnSave.Enabled = false;
         }
 
         private void start()
@@ -622,6 +623,7 @@ namespace RFIDIntegratedApplication
         private void tsbtnStop_Click(object sender, EventArgs e)
         {
             stop();
+            this.tssbtnSave.Enabled = true;
         }
 
         /// <summary>
@@ -859,6 +861,7 @@ namespace RFIDIntegratedApplication
         {
             stop();
             start();
+            this.tssbtnSave.Enabled = false;
         }
 
         private void tsmiUpdateEpc_Click(object sender, EventArgs e)
