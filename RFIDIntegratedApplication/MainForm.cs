@@ -35,7 +35,7 @@ namespace RFIDIntegratedApplication
         UpdateEpcForm _updateEpcForm;
         SearchRegionForm _searchRegionForm;
         SimulationForm _simulationForm;
-
+        SystemInfoForm _systemInfoForm;
         LinearGuideForm _linearGuideForm;
         SortingBooksForm _sortingBooksForm;
 
@@ -66,7 +66,7 @@ namespace RFIDIntegratedApplication
             _tagTableForm = new TagTableForm();
             _rssiGraphForm = new RSSIGraphFrom();
             _phaseGraphForm = new PhaseGraphForm();
-
+            _systemInfoForm = new SystemInfoForm();
             _sortingBooksForm = new SortingBooksForm();
             _linearGuideForm = new LinearGuideForm();
             _updateEpcForm = new UpdateEpcForm();
@@ -391,6 +391,7 @@ namespace RFIDIntegratedApplication
                     }
                     TagInfo lastTagInfo = tagInfoList.Last();
                     UpdateStatusStrip(lastTagInfo, false);
+                    this._systemInfoForm.updateTime((long)lastTagInfo.FirstSeenTime);
                 }
                 Thread.Sleep(10);
             }
@@ -712,7 +713,7 @@ namespace RFIDIntegratedApplication
 
         private void tsmiPhaseGraph_Click(object sender, EventArgs e)
         {
-            _phaseGraphForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
+            _systemInfoForm.Show(this.dockPanelMain, AppConfig.systemInfoDockState);
         }
 
         private void tsmiDemoSortingBooks_Click(object sender, EventArgs e)
@@ -832,7 +833,7 @@ namespace RFIDIntegratedApplication
 
         private void tssbtnAddWindow_ButtonClick(object sender, EventArgs e)
         {
-
+           
         }
 
         private void tsbtnDisconnect_Click(object sender, EventArgs e)
