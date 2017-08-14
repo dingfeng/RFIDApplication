@@ -248,6 +248,7 @@ namespace RFIDIntegratedApplication
             // Tag Inventory State Aware
             cbTagInventoryStateAware.Text = RFIDReaderParameter.antennaConfiguration.TagInventoryStateAware.ToString();
             // C1G2 RF Control
+            RFIDReaderParameter.antennaConfiguration.ModeIndex = 0;
             foreach (uint index in RFIDReaderParameter.readerCapabilities.SupportedModeIndex)
             {
                 foreach (KeyValuePair<string, ushort> mode in RFIDReaderParameter.readerCapabilities.PreDefinedModeTable)
