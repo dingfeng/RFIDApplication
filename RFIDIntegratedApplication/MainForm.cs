@@ -481,8 +481,8 @@ namespace RFIDIntegratedApplication
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 CSVFileHelper.SaveCSV(_tagsTable.Tags, fileDialog.FileName);
-                TagsWithPosTable tagsWithPosTable = PhaseLocating.getInstance().tagsWithPosTable;
-                CSVFileHelper.SaveCSV(tagsWithPosTable.tags, fileDialog.FileName + "WithPos.csv");
+                //TagsWithPosTable tagsWithPosTable = PhaseLocating.getInstance().tagsWithPosTable;
+               // CSVFileHelper.SaveCSV(tagsWithPosTable.tags, fileDialog.FileName + "WithPos.csv");
             }
         }
 
@@ -578,7 +578,7 @@ namespace RFIDIntegratedApplication
             this.tssbtnSave.Enabled = false;
         }
 
-        private void start()
+        public void start()
         {
             this._readerSettingsForm.SendConfigToRFIDReaderPara();
             StartInventory();
@@ -841,7 +841,7 @@ namespace RFIDIntegratedApplication
 
         }
 
-        private void stop()
+        public void stop()
         {
             StopInventory();
             //Tool Strip
