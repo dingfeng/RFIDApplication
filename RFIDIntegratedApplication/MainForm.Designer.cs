@@ -44,6 +44,7 @@
             this.tsmiReaderSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTagTable = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRSSIGraph = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPhaseGraph = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHolographics = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDemoSortingBooks = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.tsslRunTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblCounter = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -199,6 +199,14 @@
             this.tsmiRSSIGraph.Text = "RSSI Graph";
             this.tsmiRSSIGraph.Click += new System.EventHandler(this.tsmiRSSIGraph_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.toolStripMenuItem1.Text = "Phase Graph";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // tsmiPhaseGraph
             // 
             this.tsmiPhaseGraph.Image = global::RFIDIntegratedApplication.Properties.Resources.sys_info;
@@ -278,13 +286,6 @@
             this.tsslblStatus.Size = new System.Drawing.Size(64, 24);
             this.tsslblStatus.Text = "Ready";
             this.tsslblStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
-            this.toolStripMenuItem1.Text = "Phase Graph";
             // 
             // MainForm
             // 

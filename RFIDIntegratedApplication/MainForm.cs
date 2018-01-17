@@ -713,7 +713,7 @@ namespace RFIDIntegratedApplication
 
         private void tsmiPhaseGraph_Click(object sender, EventArgs e)
         {
-            _systemInfoForm.Show(this.dockPanelMain, AppConfig.systemInfoDockState);
+            _systemInfoForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
         }
 
         private void tsmiDemoSortingBooks_Click(object sender, EventArgs e)
@@ -868,6 +868,11 @@ namespace RFIDIntegratedApplication
         private void tsmiUpdateEpc_Click(object sender, EventArgs e)
         {
             this._updateEpcForm.Show(this.dockPanelMain, AppConfig.updateEpcDockState);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            _phaseGraphForm.Show(this.dockPanelMain, AppConfig.phaseGraphDockState);
         }
     }
 
